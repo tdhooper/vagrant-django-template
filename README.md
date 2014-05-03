@@ -9,7 +9,7 @@ A template for new Django 1.5 projects developed under Vagrant. Features offered
 * Separation of configuration settings into base.py, dev.py and production.py (and optionally local.py, kept outside
   of version control) as per http://www.sparklewise.com/django-settings-for-production-and-development-best-practices/
 * South, django-devserver, django-compressor, django-debug-toolbar out of the box
-* A boilerplate base template with jquery included, and various other ideas and best practices borrowed from https://github.com/h5bp/html5-boilerplate
+* An example app
 
 Setup
 -----
@@ -28,6 +28,10 @@ To start a new project, run the following commands:
 
 This will make the app accessible on the host machine as http://localhost:8111/ . The codebase is located on the host
 machine, exported to the VM as a shared folder; code editing and Git operations will generally be done on the host.
+
+Using in projects
+-----------------
+Django apps added to the project/apps folder will automatically have their URLs included so there is no need to modify anything in this repository to get them running.
 
 See also
 --------
