@@ -1,15 +1,10 @@
-vagrant-django-template
-=======================
+stars-to-loves-vagrant-environment
+==================================
 
-A template for new Django 1.5 projects developed under Vagrant. Features offered include:
-
-* A Vagrantfile for building an Ubuntu Precise based VM
-* A virtualenv (configured to be active on login), with project dependencies managed through a requirements.txt file
-* A PostgreSQL database (with the same name as the project, pre-configured in the project settings file)
-* Separation of configuration settings into base.py, dev.py and production.py (and optionally local.py, kept outside
-  of version control) as per http://www.sparklewise.com/django-settings-for-production-and-development-best-practices/
-* South, django-devserver, django-compressor, django-debug-toolbar out of the box
-* An example app
+* Vagrant environment for use with stars-to-loves
+* Based on https://github.com/tdhooper/vagrant-django-template
+* Includes extra dependencies:
+** libspotify and pyspotify (from http://pyspotify.mopidy.com/en/latest/installation/)
 
 Setup
 -----
@@ -19,8 +14,8 @@ new ones.)
 
 To start a new project, run the following commands:
 
-    django-admin.py startproject --template https://github.com/tdhooper/vagrant-django-template/zipball/master --name=Vagrantfile myproject
-    cd myproject
+    django-admin.py startproject --template https://github.com/tdhooper/vagrant-django-template/zipball/stars-to-loves-vagrant-environment --name=Vagrantfile vagrant-environment
+    cd vagrant-environment
     vagrant up
     vagrant ssh
       (then, within the SSH session:)
@@ -29,14 +24,9 @@ To start a new project, run the following commands:
 This will make the app accessible on the host machine as http://localhost:8111/ . The codebase is located on the host
 machine, exported to the VM as a shared folder; code editing and Git operations will generally be done on the host.
 
-Using in projects
------------------
-Django apps added to the project/apps folder will automatically have their URLs included so there is no need to modify anything in this repository to get them running.
+Using with stars-to-loves
+-------------------------
+To install the stars-to-loves app:
 
-Unfortunately symlinks don't work inside VirtualBox shared folders, so you app will have to actially reside within the project/apps folder.
-
-See also
---------
-https://github.com/torchbox/vagrant-django-base - a recipe for a Vagrant base box that can be used in place of precise32
-in the Vagrantfile - this has more of the server setup baked in, so that we can save time by not having to re-run those
-steps every time we create a new VM instance.
+    cd varant-environment/vagrant-environment/apps/
+    git clone git@github.com:tdhooper/stars-to-loves.git starstoloves
