@@ -4,7 +4,8 @@ stars-to-loves-vagrant-environment
 * Vagrant environment for use with stars-to-loves
 * Based on https://github.com/tdhooper/vagrant-django-template
 * Includes extra dependencies:
-** libspotify and pyspotify (from http://pyspotify.mopidy.com/en/latest/installation/)
+** libspotify and pyspotify (http://pyspotify.mopidy.com)
+** lfmh (https://bitbucket.org/hauzer/lfm/)
 
 Setup
 -----
