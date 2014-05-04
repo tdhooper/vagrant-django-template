@@ -6,3 +6,4 @@ django-debug-toolbar==1.0.1
 gunicorn==18.0
 Fabric==1.8.1
 pyspotify==2.0.0b2
+lfmh==1.1.1
