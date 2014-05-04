@@ -33,6 +33,8 @@ Using in projects
 -----------------
 Django apps added to the project/apps folder will automatically have their URLs included so there is no need to modify anything in this repository to get them running.
 
+Unfortunately symlinks don't work inside VirtualBox shared folders, so you app will have to actially reside within the project/apps folder.
+
 See also
 --------
 https://github.com/torchbox/vagrant-django-base - a recipe for a Vagrant base box that can be used in place of precise32
