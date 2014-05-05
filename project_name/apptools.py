@@ -14,7 +14,7 @@ def _has_urls(app):
 
 def get_app_urls():
     apps = [ app for app in [ os.path.basename(f) for f in glob.glob(os.path.dirname(__file__)+"/apps/*") ] if _has_urls(app) ]
-    app_urls = [ url(r'^$', include(app + '.urls')) for app in apps ]
+    app_urls = [ url(r'^', include(app + '.urls')) for app in apps ]
     return app_urls
 
 def get_app_static_dirs():
