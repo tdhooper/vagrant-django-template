@@ -18,6 +18,5 @@ def get_app_urls():
     return app_urls
 
 def get_app_static_dirs():
-    dirs = [ f for f in glob.glob(os.path.dirname(__file__)+"/apps/*/static") ]
-    print dirs
+    dirs = glob.glob(os.path.dirname(__file__)+"/apps/*/static")
     return dirs
