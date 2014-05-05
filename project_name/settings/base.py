@@ -2,6 +2,7 @@
 
 import os
 import sys
+import apptools
 
 PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
 
@@ -84,6 +85,8 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+apptools.get_app_static_dirs
 
 # List of finder classes that know how to find static files in
 # various locations.

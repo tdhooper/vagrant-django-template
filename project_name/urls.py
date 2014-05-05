@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-import urltools
+import apptools
 
 admin.autodiscover()
 
@@ -8,4 +8,4 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 
-urlpatterns += urltools.get_app_urls()
+urlpatterns += apptools.get_app_urls()
