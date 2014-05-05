@@ -2,7 +2,7 @@
 
 import os
 import sys
-import {{ project_name }}.apptools
+from {{ project_name }} import apptools
 
 PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
 
