@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
 	
 	# Forward a port from the guest to the host, which allows for outside
 	# computers to access the VM, whereas host only networking does not.
-	config.vm.network "forwarded_port", guest: 800, host: 8111
+	config.vm.network "forwarded_port", guest: 8000, host: 8111
 
 	# Share an additional folder to the guest VM
 	config.vm.synced_folder ".", "/home/vagrant/{{ project_name }}"
