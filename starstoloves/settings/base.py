@@ -2,7 +2,6 @@
 
 import os
 import sys
-from starstoloves import apptools
 
 PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
 
@@ -84,7 +83,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-) + tuple(apptools.get_app_static_dirs())
+))
 
 # List of finder classes that know how to find static files in
 # various locations.
