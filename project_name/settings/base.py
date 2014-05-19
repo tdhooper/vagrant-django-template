@@ -1,13 +1,13 @@
-# Django settings for {{ project_name }} project.
+# Django settings for starstoloves project.
 
 import os
 import sys
-from {{ project_name }} import apptools
+from starstoloves import apptools
 
 PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
 
 # Modify sys.path to include the lib directory
-sys.path.append(os.path.join(PROJECT_ROOT, "{{ project_name }}", "apps"))
+sys.path.append(os.path.join(PROJECT_ROOT, "starstoloves", "apps"))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -21,7 +21,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '{{ project_name }}',
+        'NAME': 'starstoloves',
         'USER': 'postgres',
         'PASSWORD': '',
         'HOST': '',  # Set to empty string for localhost.
@@ -116,10 +116,10 @@ MIDDLEWARE_CLASSES = (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
-ROOT_URLCONF = '{{ project_name }}.urls'
+ROOT_URLCONF = 'starstoloves.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
+WSGI_APPLICATION = 'starstoloves.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -144,7 +144,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
-EMAIL_SUBJECT_PREFIX = '[{{ project_name }}] '
+EMAIL_SUBJECT_PREFIX = '[starstoloves] '
 
 INTERNAL_IPS = ('127.0.0.1', '10.0.2.2')
 
